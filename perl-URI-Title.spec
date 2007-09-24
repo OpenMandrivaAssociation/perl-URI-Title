@@ -12,6 +12,10 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	perl-devel
 BuildRequires: perl(LWP::Simple)
 BuildRequires: perl(Module::Pluggable)
+BuildRequires: perl(File::Type)
+BuildRequires: perl(MP3::Info) 
+BuildRequires: perl(Image::Size)
+
 BuildArch: noarch
 
 %description
