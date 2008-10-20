@@ -1,7 +1,7 @@
 %define realname   URI-Title
 
 Name:		perl-%{realname}
-Version:    1.62
+Version:    1.82
 Release:    %mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
