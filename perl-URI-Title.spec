@@ -1,28 +1,29 @@
-%define realname   URI-Title
+%define upstream_name    URI-Title
+%define upstream_version 1.82
 
-Name:		perl-%{realname}
-Version:    1.82
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
 Release:    %mkrel 1
-License:	GPL or Artistic
-Group:		Development/Perl
+
 Summary:    Module to get the titles of things on the web in a sensible way
-Source0:    ftp://ftp.perl.org/pub/CPAN/modules/by-module/URI/URI-Title-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{realname}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	perl-devel
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    ftp://ftp.perl.org/pub/CPAN/modules/by-module/URI/URI-Title-%{upstream_version}.tar.bz2
+
 BuildRequires: perl(LWP::Simple)
 BuildRequires: perl(Module::Pluggable)
 BuildRequires: perl(File::Type)
 BuildRequires: perl(MP3::Info) 
 BuildRequires: perl(Image::Size)
-
 BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Perl module to get the titles of things on the web in a sensible way.
 
 %prep
-%setup -q -n URI-Title-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -44,4 +45,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes
 %{perl_vendorlib}/URI/*
 %{_mandir}/man3/*
-
