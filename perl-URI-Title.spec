@@ -1,5 +1,5 @@
 %define upstream_name    URI-Title
-%define upstream_version 1.82
+%define upstream_version 1.85
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
