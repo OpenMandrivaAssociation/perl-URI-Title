@@ -1,15 +1,15 @@
 %define upstream_name    URI-Title
-%define upstream_version 1.86
+%define upstream_version 1.88
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 1.86
+Version:	%perl_convert_version %{upstream_version}
 Release:	1
 
 Summary:	Module to get the titles of things on the web in a sensible way
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/URI/URI-Title-1.86.tar.gz
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/URI/URI-Title-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(LWP::Simple)
@@ -69,4 +69,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Mon Sep 24 2007 Michael Scherer <misc@mandriva.org> 1.62-1mdv2008.0
 - First Mandriva package
+
 
