@@ -8,7 +8,7 @@ Release:	3
 Summary:	Module to get the titles of things on the web in a sensible way
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/URI/URI-Title-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
